@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>컴퓨터 코딩 17일차</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>제로에서 시작하기</h1>
+    <div id="grid">
+      <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div id="main">
+      <h2> 컴퓨터 코딩 - 17일차</h2>
+      <pre>
+      <p>
+        오디오 태그- audio
+        이미지태그와 비슷하게 src포함하여 작성한다.
+        <audio src=""></audio>
+        <ul>
+          <li>autoplay- 자동재생</li>
+          <li>controls- 제어기 표시</li>
+          <li>loop- 반복재생</li>
+          <li>preload- 사용안하더라도 미리 다운로드</li>
+          <li>src- url 설정</li>
+          <li>volume- 0.0부터 1.0까지 설정 소리크기</li>
+        </ul>
+        audio pile형식은 mp3,Wav,Ogg 3가지이다.
+        source 태그 사용을 통한 호환성 높이기- audio 파일 형식에 따라서 source형식과 type을 일치시켜준다.
+        웹브라우저가 가장 앞에 있는 파일부터 재생이 되는지 검사하고, 된다면 더 이상 검색하지 않는다.
+        ex)
+        <audio controls autoplay>
+          <source src="pop.ogg" type="audio.ogg">
+          <source src="pop.mp3" type="audio.mp3">
+          <source src="pop.wav" type="audio.wav">
+        </audio>
+        이런식으로 말이다! 뒤의 type속성은 mine타입으로 표시되고 이는 오디오데이터 중 형식이 각각 다름을 표시해준다.
+      </p>
+      <p>
+        비디오 태그- video
+        video태그도 audio와 같다
+        요소의 차이점은
+          <ul>
+            <li>autoplay- 자동재생</li>
+            <li>controls- 제어기 표시</li>
+            <li>loop- 반복재생</li>
+            <li>preload- 사용안하더라도 미리 다운로드</li>
+            <li>src- url 설정</li>
+            <li>muted- 오디오 출력을 중지</li>
+            <li>width,height- 너비와 높이</li>
+            <li>poster- 다운로드 중일 때 사용할 이미지 </li>
+          </ul>
+          비디오 파일의 형식은 mp4,webm,ogg등이 있다.
+         오디오와 마찬가지로 브라우저에 상관없는 호환성을 높이기 위해서는 type속성을 사용해준다
+         이 때도 mine타입으로 작성한다.
+         ex) type="video.mp4" type="video.webm" type="video.ogg"
+         <em> 비디오태그와 오디오태그 모두 source태그를 많이 사용할때는 src속성으로 지정한다. </em>
+      </p>
+      <p>
+          inline frame- iframe태그
+          웹 페이지 안에서 다른 웹 페이지를 표시하고자 할 때 사용하거나 하나의 페이지를 여러 프레임으로 나누어서 각각 다른 문서를 표시하고싶을 때도 사용
+          프레임 만들어서 상자처럼 넣는 태그라고 생각하면 편하다! 그것이 링크가 될 수도 있고 문서가 될 수도 있다.
+          iframe의 요소로는 seamless가 있다 이는 경계선 없이 문서의 일부분인 것처럼 화면에 보이게 함! border="0"과 비슷
+          타겟 프레임으로 사용될 수도 있는데 이에 대한 실습 진행 필요하- 주말에는 실습 진행할거임!
+      </p>
+      <p>
+          정말 중요한 div태그와 span태그
+            div태그는 간단하게 컨테이너라고 생각하면 된다. 박스라고 생각하고 묶는다고 생각하면 된다.
+            html요소를 묶는 박스이다.
+            div태그는 block elemnet이기때문에 하나의 줄 전체를 사용하고
+            span태그는 inline elemnet이기때문에 콘텐츠의 크기만큼을 묶는다.
+      </p>
+      <p>
+        poiemaweb 1.4 웹페이지를 구성하는 기본 태그
+        1. html 태그
+        2. head 태그 - 메타데이터를 포함하기 위한 요소이며, title,style,link,script의 태그등이 들어간다. 또한 화면에 표시되지 않는다.
+                      meta tag에 대해서는 좀 더 많은 공부를 하고 이해해도될듯 (어려운데 지금 당장은 힘들다ㅜ)
+        3. body 태그 - 본문이자 화면에 표시되는 정보를 작성하고 출력하는 곳
+      </p>
+      </pre>
+    </div>
+    </div>
+  </body>
+</html>
